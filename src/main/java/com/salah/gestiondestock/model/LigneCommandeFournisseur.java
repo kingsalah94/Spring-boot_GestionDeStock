@@ -1,9 +1,6 @@
 package com.salah.gestiondestock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
@@ -17,7 +14,8 @@ public class LigneCommandeFournisseur extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name = "idarticles")
     private Articles articles;
-
+    @Column(name = "idEntreprise")
+    private Integer idEntreprise;
     @ManyToOne
     @JoinColumn(name = "idcommandefournisseur")
     private CommandFournisseur commandeFournisseur;

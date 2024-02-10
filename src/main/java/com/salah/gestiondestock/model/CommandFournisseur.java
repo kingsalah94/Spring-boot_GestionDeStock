@@ -18,7 +18,8 @@ public class CommandFournisseur extends AbstractEntity{
     private String code;
     @Column(name = "dateCommande")
     private Instant dateCommande;
-
+    @Column(name = "idEntreprise")
+    private Integer idEntreprise;
     @ManyToOne
     @JoinColumn(name = "idfournisseur")
     private Fournisseur fournisseur;

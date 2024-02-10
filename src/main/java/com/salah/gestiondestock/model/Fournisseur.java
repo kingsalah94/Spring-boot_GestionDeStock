@@ -23,6 +23,8 @@ public class Fournisseur extends AbstractEntity{
     private String photo;
     @Column(name = "numTel")
     private String numTel;
+    @Column(name = "idEntreprise")
+    private Integer idEntreprise;
     @Embedded
     private Adresse adresse;
 

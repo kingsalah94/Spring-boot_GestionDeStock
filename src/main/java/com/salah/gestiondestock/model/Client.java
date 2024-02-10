@@ -25,6 +25,8 @@ public class Client extends AbstractEntity{
     private String numTel;
     @Embedded
     private Adresse adresse;
+    @Column(name = "idEntreprise")
+    private Integer idEntreprise;
 
     @OneToMany(mappedBy = "client")
     private List<CommandClient> commandClients;
