@@ -1,5 +1,6 @@
 package com.salah.gestiondestock.Exceptions;
 
+import com.salah.gestiondestock.Enums.ErrorCodes;
 import lombok.Getter;
 
 import java.util.List;

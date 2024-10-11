@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Authorization")
+@Table(name = "Authorizations")
 public class Authorization extends  AbstractEntity{
 
     @Column(name = "authorizationname")

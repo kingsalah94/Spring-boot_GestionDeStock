@@ -14,7 +14,7 @@ public class ArticlesMapperImpl {
         return articlesDto;
     }
 
-    public Articles fromArticles(ArticlesDto articlesDto){
+    public Articles fromArticlesDTO(ArticlesDto articlesDto){
 
         Articles articles = new Articles();
         BeanUtils.copyProperties(articlesDto,articles);

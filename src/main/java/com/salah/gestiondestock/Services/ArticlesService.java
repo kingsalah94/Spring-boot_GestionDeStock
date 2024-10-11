@@ -1,7 +1,7 @@
 package com.salah.gestiondestock.Services;
 
 import com.salah.gestiondestock.Dtos.ArticlesDto;
-import com.salah.gestiondestock.Exceptions.ArticlesNotFoundException;
+import com.salah.gestiondestock.Exceptions.EntityNotFoundException;
 
 import java.util.List;
 
@@ -12,8 +12,9 @@ public interface ArticlesService {
 
     void deleteArticles(Integer id);
 
-    ArticlesDto getOneArticles(Integer id) throws ArticlesNotFoundException;
+    ArticlesDto getOneArticles(Integer id) throws EntityNotFoundException;
+    ArticlesDto getArticleByCodeArticle(String codeArticle) throws EntityNotFoundException;
 
-    List<ArticlesService> getAllArticles();
+    List<ArticlesDto> getAllArticles();
 
 }

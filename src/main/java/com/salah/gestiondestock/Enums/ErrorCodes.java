@@ -1,4 +1,4 @@
-package com.salah.gestiondestock.Exceptions;
+package com.salah.gestiondestock.Enums;
 
 
 public enum ErrorCodes {
