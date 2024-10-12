@@ -47,7 +47,14 @@ public class ArticlesServiceImpl implements ArticlesService{
 
     @Override
     public ArticlesDto updateArticles(ArticlesDto articlesDto) {
-        return null;
+        List<String> errors = ArticleValidator.validate(articlesDto);
+        if (!errors.isEmpty()) {
+            log.error("Error while updating articles, Article is not valid {}",articlesDto);
+            throw new InvalideEntityException("Larticles n'est pas valide", ErrorCodes.ARTICLE_NOT_VALIDE, errors);
+        }
+        Articles articles = dtoMapper.fromArticlesDTO(articlesDto);
+        Articles updatedArticles = articlesRepository.save(articles);
+        return dtoMapper.fromArticles(updatedArticles);
     }
 
 
