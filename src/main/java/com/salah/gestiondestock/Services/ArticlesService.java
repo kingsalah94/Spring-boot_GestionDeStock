@@ -13,6 +13,7 @@ public interface ArticlesService {
     void deleteArticles(Integer id);
 
     ArticlesDto getOneArticles(Integer id) throws EntityNotFoundException;
+
     ArticlesDto getArticleByCodeArticle(String codeArticle) throws EntityNotFoundException;
 
     List<ArticlesDto> getAllArticles();

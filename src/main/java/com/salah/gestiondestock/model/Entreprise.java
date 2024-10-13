@@ -16,6 +16,7 @@ public class Entreprise extends AbstractEntity{
 
     @Column(name = "nom")
     private String nom;
+
     @Column(name = "description")
     private String description;
 

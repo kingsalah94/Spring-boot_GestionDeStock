@@ -17,6 +17,7 @@ public interface CategorieApi {
     @PutMapping(value =APP_ROOT + "category/updateCategory", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     CategoryDto updateCategory(@RequestBody CategoryDto categoryDto);
 
+
     @DeleteMapping(value = APP_ROOT + "/category/delete/{idCategory}")
     void deleteCategory(@PathVariable("idCategory") Integer id);
 

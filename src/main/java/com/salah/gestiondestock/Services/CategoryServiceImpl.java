@@ -27,6 +27,7 @@ public class CategoryServiceImpl implements CategorieService{
     private CategoryRepository categoryRepository;
     private CategoryMapperImpl dtoMapper;
 
+
     @org.springframework.beans.factory.annotation.Autowired
     public CategoryServiceImpl(View error) {
         this.error = error;
